@@ -1,5 +1,26 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
 
-const Main = () => <h1>Main</h1>;
+// import { Container } from './styles';
 
-export default Main;
+export default class Main extends Component {
+  state = {
+    repositoryInput: ""
+  };
+  render() {
+    return (
+      <Fragment>
+        <form onSubmit={this.handleAddRepository}>
+          <input
+            placeholder="usuário/repositório"
+            value={this.state.repositoryInput}
+          />
+          <button type="submit">Adicionar</button>
+        </form>
+
+        <ul>
+          <li />
+        </ul>
+      </Fragment>
+    );
+  }
+}
